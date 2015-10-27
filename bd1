@@ -11,7 +11,7 @@ static void Main(string[] args)
     db.SaveChanges();
     var query =
       from b in db.Blogs
-      orderby b.Name
+      orderby b.Name descending
       select b;
     foreach (var item in query)
     {
